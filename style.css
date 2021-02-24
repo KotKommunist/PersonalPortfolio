@@ -1,26 +1,86 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-    font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+#navbar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+
+  background-color: cornflowerblue;
 }
 
 .navlist {
-    display: flex;
-    justify-content: flex-end;
-    list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  background-color: skyblue;
+}
+
+.navlist a {
+  display: block;
+  font-size: 1.5em;
+  padding: 0.65em;
+}
+
+.navlist a:hover {
+  background-color: darkgreen;
 }
 
 #welcome-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(22, 10, 85);
-    color: seashell;
-    width: 100%;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(22, 10, 85);
+  color: seashell;
+  width: 100%;
+  height: 100vh;
 }
+
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.project-tile {
+  margin: 1em;
+}
+
+.project-tile:hover {
+  color: #999;
+}
+
+figcaption {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+@media (max-width: 980px) {
+    html {
+      font-size: 80%;
+    }
+  }
+
+@media (max-width: 460px) {
+    html {
+      font-size: 60%;
+    }
+  }
