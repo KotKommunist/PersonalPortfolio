@@ -25,3 +25,15 @@ let myBool = true
 
 let myArray = []
 let myArray2 = [42, "bob", myBool, Answer, true]
+let secondElement = myArray2[1]
+myArray2.push[pizza]
+myArray2.unshift["bob"]
+//Objects
+
+let minObject = {}
+
+const myCar = {
+    make: 'Chevrolet',
+    color: 'Red',
+
+}
