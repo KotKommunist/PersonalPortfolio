@@ -1,35 +1,34 @@
-import {people} from '../Data/people.js'
+import { people } from '../data/people.js'
 
 const mainElement = document.querySelector('#main')
 
 const mainHeader = document.createElement('header')
 
-const MaleButton = document.createElement('button')
+const maleButton = document.createElement('button')
 maleButton.textContent = 'Male Characters'
 mainHeader.appendChild(maleButton)
+
+maleButton.addEventListener('click', () => populateDOM(maleCharacters))
 
 document.body.insertBefore(mainHeader, mainElement)
 
 const maleCharacters = people.filter(person => person.gender === 'male')
 const femaleCharacters = people.filter(person => person.gender === 'female')
 
-populateDOM(maleCharacters)
+function populateDOM(characters) {
+    characters.forEach((person) => {
+        const charFigure = document.createElement('figure')
+        const charImg = document.createElement('img')
+        let charNum = getLastNumber(person.url)
+        charImg.src = `https://starwars-visualguide.com/assets/img/characters/${charNum}.jpg`
+        const charCaption = document.createElement('figcaption')
+        charCaption.textContent = person.name
 
-function populateDOM(characters){
+        charFigure.appendChild(charImg)
+        charFigure.appendChild(charCaption)
 
-characters.forEach((person) => {
-    console.log(person.name, index + 1)
-const charFigure = document.createElement('figure')
-const charImg = document.createElement('img')
-let charNum = getLastNumber(person.url)
-charImg.src = `https://starwars-visualguide.com/assets/img/characters/${charNum}.jpg`
-const charCaption = document.createElement('figcaption')
-charCaption.textContent = person.name
-
-charFigure.appendChild(charImg)
-charFigure.appendChild(charCaption)
-mainElement.appendChild(charFigure)
-})
+        mainElement.appendChild(charFigure)
+    })
 }
 
 function getLastNumber(url) {
@@ -39,5 +38,5 @@ function getLastNumber(url) {
         start++
     }
     return url.slice(start, end)
- }
+}
 
