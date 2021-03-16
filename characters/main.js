@@ -16,9 +16,19 @@ femaleButton.textContent = 'Female Characters'
 mainHeader.appendChild(femaleButton)
 femaleButton.addEventListener('click', () => populateDOM(femaleCharacters))
 
+const othersButton = document.createElement('button')
+othersButton.textContent = 'Other Characters'
+mainHeader.appendChild(othersButton)
+othersButton.addEventListener('click', () => populateDOM(otherCharacters))
+
 const maleCharacters = people.filter(person => person.gender === 'male')
 const femaleCharacters = people.filter(person => person.gender === 'female')
-
+const otherCharacters = people.filter(person => {
+    if (person.gender === 'n/a' ||
+        person.gender === 'hermaphrodite') {
+        return person
+    } //TODO: make sure to also include gender: 'none'
+})
 function populateDOM(characters) {
     removeChildren(mainElement)
     characters.forEach((person) => {
