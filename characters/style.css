@@ -2,10 +2,13 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+body {
+    background-image: url(https://whnt.com/wp-content/uploads/sites/20/2020/10/GettyImages-1211293811.jpg?w=2560&h=1440&crop=1);
+}
 #main {
     display: flex;
     flex-wrap: wrap;
+    
 }
 
 figure > img {
