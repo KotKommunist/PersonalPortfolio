@@ -1,4 +1,5 @@
 import { people } from '../data/people.js'
+import { getLastNumber, removeChildren } from '../utils/index.js'
 
 const mainElement = document.querySelector('#main')
 
@@ -29,6 +30,7 @@ const otherCharacters = people.filter(person => {
         return person
     } //TODO: make sure to also include gender: 'none'
 })
+
 function populateDOM(characters) {
     removeChildren(mainElement)
     characters.forEach((person) => {
@@ -46,21 +48,6 @@ function populateDOM(characters) {
     })
 }
 
-function getLastNumber(url) {
-    let end = url.lastIndexOf('/')
-    let start = end - 2
-    if (url.charAt(start) === '/') {
-        start++
-    }
-    return url.slice(start, end)
-}
-
-function removeChildren(container) {
-    while (container.firstChild) {
-        container.removeChild(container.firstChild)
-    }
-
-}
 
 /* while (element.firstChild) {
     element.removeChild(element.firstChild);

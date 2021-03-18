@@ -3,6 +3,19 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: black;
+}
+
+main {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
 li {
     list-style-type: none;
 }
