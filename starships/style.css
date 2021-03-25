@@ -3,13 +3,21 @@
     box-sizing: border-box;
 }
 
+ body {
+     background-image: url(https://cdn.mos.cms.futurecdn.net/CZwwGN84vpwLXivbuMsYSZ.jpg);
+ }
+
 h1 {
     color: #fff;
+    text-align: center;
+    font-size: x-large;
+    font-weight: 700;
 }
 
 main {
     display: flex;
     /* height: 100vh; */
+    
 }
 
 .shipView {
@@ -20,17 +28,12 @@ main {
 
 nav {
     width: 200px;
+    background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.nextgov.com%2Fit-modernization%2F2020%2F10%2Fmicrosoft-spacex-team-bring-cloud-computing-space%2F169377%2F&psig=AOvVaw0AefnAtHqcBYu7MRDvpqkx&ust=1616779207533000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNC-m4j6y-8CFQAAAAAdAAAAABAD");
 }
 
 img, nav {
     position: relative;
     z-index: 1;
-}
-
-h1 {
-    text-align: center;
-    font-size: x-large;
-    font-weight: 700;
 }
 
 a {
@@ -40,4 +43,5 @@ a {
 
 li {
     list-style-type: none;
+    
 }

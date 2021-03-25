@@ -70,6 +70,11 @@ body {
   color:  rgb(228, 224, 4);
 }
 
+figure > img {
+  height: 200px;
+  width: 317px;
+}
+
 figcaption {
   text-align: center;
 }
