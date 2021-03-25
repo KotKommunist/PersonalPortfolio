@@ -7,6 +7,18 @@ const nav = document.querySelector('nav')
 const navList = document.querySelector('.navList')
 const shipView = document.querySelector('.imageDisplay')
 
+const dialog = document.querySelector('.modal')
+const closeButton = document.querySelector('.modal-close')
+const modalBackground = document.querySelector('.modal-background')
+
+closeButton.addEventListener('click', () =>{
+    dialog.classList.toggle("is-active")
+})
+
+modalBackground.addEventListener('click', () => {
+    dialog.classList.toggle("is-active")
+})
+
 function populateNav(starships) {
     starships.forEach((starship) => {
         let anchorWrap = document.createElement('a')
@@ -28,6 +40,7 @@ function populateimageDisplay(shipData) {
     shipImage.addEventListener('error', (err) => {
         console.log(`Oops! Image doesn't exist.`)
         shipImage.hidden = true
+        dialog.classList.toggle("is-active")
     })
     shipView.appendChild(shipImage)
 }
