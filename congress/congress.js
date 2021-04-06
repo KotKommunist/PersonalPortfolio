@@ -43,4 +43,16 @@ function getSimplifiedCongress(congressPeople) {
     })
 }
 
+function getSimplifiedCongress(representativePeople) {
+    return representativePeople.map(person => {
+        let middleName = person.middle_name ? `${person.middle_name}` : ``
+        return {
+            id: person.id,
+            name: `${person.first_name} ${middleName} ${person.last_name}`,
+            imgURL: `https://www.govtrack.us/static/legislator-photos/${person.govtrack_id}-200px.jpeg`
+        }
+    })
+}
+
 populateCongressGrid(getSimplifiedCongress(senators))
+populateCongressGrid(getSimplifiedCongress(representatives))
