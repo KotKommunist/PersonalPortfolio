@@ -48,7 +48,7 @@ function populateCardFront(pokemon) {
   let frontLabel = document.createElement("p");
   frontLabel.textContent = pokemon.name;
   let frontImage = document.createElement("img");
-  frontImage.src = "images/OO${pokemon.id}.png";
+  frontImage.src = `images/OO${getImageFileName(pokemon)}.png`;
 
   pokeFront.appendChild(frontLabel);
   pokeFront.appendChild(frontImage);
@@ -59,7 +59,7 @@ function populateCardBack(pokemon){
     let pokeBack = document.createElement('div')
     pokeBack.className = "card__face card__face--back";
     let backLabel = document.createElement("p");
-  backLabel.textContent = `Moves: $(pokemon.moves.length)`;
+  backLabel.textContent = `Moves: ${pokemon.moves.length}`;
   
 }
 
