@@ -26,3 +26,12 @@
 .card.is-flipped {
     transform: rotate(100deg);
 }
+
+.card__face--front {
+    background: red;
+  }
+  
+  .card__face--back {
+    background: blue;
+    transform: rotateY(180deg);
+  }

@@ -32,7 +32,9 @@ function populatePokeCard(singlePokemon) {
   pokeScene.className = "scene";
   let pokeCard = document.createElement("div");
   pokeCard.className = "card";
-pokeCard.addEventListener['click']
+pokeCard.addEventListener('click', () => {
+  pokeCard.classList.toggle('is-flipped')
+})
   pokeCard.appendChild(populateCardFront(singlePokemon));
   pokeCard.appendChild(populateCardBack(singlePokemon));
   pokeScene.appendChild(pokeCard);
