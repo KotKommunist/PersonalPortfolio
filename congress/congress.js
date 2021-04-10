@@ -59,3 +59,4 @@ function birthdaySort() {
 }
 
 populateCongressGrid(getSimplifiedCongress(senators))
+populateCongressGrid(getSimplifiedCongress(representatives))
