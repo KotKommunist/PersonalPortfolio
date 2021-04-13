@@ -5,6 +5,7 @@ import { removeChildren } from '../utils/index.js'
 const congressGrid = document.querySelector('.congressGrid')
 const seniorityButton = document.querySelector('#seniorityButton')
 const birthdayButton = document.querySelector('#birthdayButton')
+const missedVotesButton = document.querySelector('#missedVotes')
 
 seniorityButton.addEventListener('click', () => {
     senioritySort()
@@ -42,6 +43,7 @@ function getSimplifiedCongress(congressPeople) {
             imgURL: `https://www.govtrack.us/static/legislator-photos/${person.govtrack_id}-200px.jpeg`,
             seniority: parseInt(person.seniority, 10),
             date_of_birth: parseInt(person.date_of_birth, 10)
+            missed_votes_pct: person.missed_votes_pct
         }
     })
 }
@@ -57,6 +59,9 @@ function birthdaySort() {
         (a, b) => a.date_of_birth - b.date_of_birth
     ))
 }
+
+contst missedVotes = getSimplifiedCongress(representatives)
+.reduce(acc, rep) => (acc.missed_votes_pct > rep.missed_votes_pct ? acc : rep)
 
 populateCongressGrid(getSimplifiedCongress(senators))
 populateCongressGrid(getSimplifiedCongress(representatives))
