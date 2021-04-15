@@ -2,23 +2,30 @@ const pokeGrid = document.querySelector('.pokeGrid')
 const loadButton = document.querySelector('.loadPokemon')
 const fetchButton = document.querySelector('#fetchSelectedPokemon')
 
-const dialog = document.querySelector('.modal')
-const closeButton = document.querySelector('.modal-close')
-const modalBackground = document.querySelector('.modal-background')
-const submitButton = document.querySelector('#submitButton')
 
 
 loadButton.addEventListener('click', () => {
     loadPage()
 })
 
+class Pokemon {
+    constructor(name, height, weight, abilities, moves) {
+        this.id = 900
+        this.name = name
+        this.height = height
+        this.width =width
+        this.abilities = abilities
+        this.moves = moves
+    }
+}
+
 fetchButton.addEventListener('click', () => {
-    dialog.classList.toggle("is-active")
-    /* getAPIData(`https://pokeapi.co/api/v2/pokemon/25`).then(
+    let pokeNameOrId = prompt("Enter Pokemon ID or Name")
+     getAPIData(`https://pokeapi.co/api/v2/pokemon/${pokeNameOrId}`).then(
         (data) => {
             populatePokeCard(data)
         }
-    ) */
+    ) 
 })
 
 submitButton.addEventListener('click', () => {
@@ -37,7 +44,7 @@ async function getAPIData(url) {
 }
 
 function loadPage() {
-    getAPIData(`https://pokeapi.co/api/v2/pokemon?limit=42&offset=56`).then(
+    getAPIData(`https://pokeapi.co/api/v2/pokemon?limit=42&offset=433`).then(
         async (data) => {
             for (const singlePokemon of data.results) {
                 await getAPIData(singlePokemon.url).then(
@@ -49,7 +56,6 @@ function loadPage() {
 }
 
 function populatePokeCard(singlePokemon) {
-   // console.log(singlePokemon)
     let pokeScene = document.createElement('div')
     pokeScene.className = 'scene'
     let pokeCard = document.createElement('div')
@@ -70,7 +76,7 @@ function populateCardFront(pokemon) {
     let frontLabel = document.createElement('p')
     frontLabel.textContent = pokemon.name
     let frontImage = document.createElement('img')
-    frontImage.src = `images/${getImageFileName(pokemon)}.png`
+    frontImage.src = getImageFileName(pokemon).png
 
     pokeFront.appendChild(frontLabel)
     pokeFront.appendChild(frontImage)
@@ -91,5 +97,8 @@ function getImageFileName(pokemon) {
     if (pokemon.id < 10) pokeId = `00${pokemon.id}`
     if (pokemon.id > 9 && pokemon.id < 100) pokeId = `0${pokemon.id}`
     if (pokemon.id > 99 && pokemon.id < 810) pokeId = pokemon.id
+    if (pokemon.id === 900) {
+        return
+    }
     return `https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/images/${pokeId}.png`
 }
