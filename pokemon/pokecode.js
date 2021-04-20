@@ -1,36 +1,41 @@
 const pokeGrid = document.querySelector('.pokeGrid')
 const loadButton = document.querySelector('.loadPokemon')
 const fetchButton = document.querySelector('#fetchSelectedPokemon')
-
-
-
-loadButton.addEventListener('click', () => {
-    loadPage()
-})
+const newButton = document.querySelector('#newPokemon')
 
 class Pokemon {
     constructor(name, height, weight, abilities, moves) {
         this.id = 900
         this.name = name
         this.height = height
-        this.width =width
+        this.weight = weight
         this.abilities = abilities
         this.moves = moves
     }
 }
 
-fetchButton.addEventListener('click', () => {
-    let pokeNameOrId = prompt("Enter Pokemon ID or Name")
-     getAPIData(`https://pokeapi.co/api/v2/pokemon/${pokeNameOrId}`).then(
-        (data) => {
-            populatePokeCard(data)
-        }
-    ) 
+loadButton.addEventListener('click', () => loadPage())
+  
+newButton.addEventListener('click', () => {
+    let pokeName = prompt('What is the name of your new Pokemon?')
+    let pokeHeight = prompt('What is the height of your Pokemon?')
+    let pokeWeight = prompt('Pokemon weight?')
+    let newPokemon = new Pokemon(
+        pokeName,
+        pokeHeight,
+        pokeWeight,
+        ['eat', 'sleep'],
+        ['study', 'game']
+    )
+    populatePokeCard(newPokemon)
 })
 
-submitButton.addEventListener('click', () => {
-    let inputField = document.querySelector('.input')
-    inputValue = inputField.value
+fetchButton.addEventListener('click', () => {
+    let pokeNameOrId = prompt("Enter Pokemon ID or Name:").toLowerCase()
+    console.log(pokeNameOrId)
+    getAPIData(`https://pokeapi.co/api/v2/pokemon/${pokeNameOrId}`).then(
+        (data) => populatePokeCard(data)
+    )
 })
 
 async function getAPIData(url) {
@@ -39,12 +44,13 @@ async function getAPIData(url) {
         const data = await response.json() // convert the response into JSON
         return data // return the data from the fuction to whoever called it
     } catch (error) {
+        // must have been an error
         console.log(error)
     }
 }
 
 function loadPage() {
-    getAPIData(`https://pokeapi.co/api/v2/pokemon?limit=42&offset=433`).then(
+    getAPIData(`https://pokeapi.co/api/v2/pokemon?limit=25&offset=748`).then(
         async (data) => {
             for (const singlePokemon of data.results) {
                 await getAPIData(singlePokemon.url).then(
@@ -56,6 +62,7 @@ function loadPage() {
 }
 
 function populatePokeCard(singlePokemon) {
+   // console.log(singlePokemon)
     let pokeScene = document.createElement('div')
     pokeScene.className = 'scene'
     let pokeCard = document.createElement('div')
@@ -76,7 +83,7 @@ function populateCardFront(pokemon) {
     let frontLabel = document.createElement('p')
     frontLabel.textContent = pokemon.name
     let frontImage = document.createElement('img')
-    frontImage.src = getImageFileName(pokemon).png
+    frontImage.src = getImageFileName(pokemon)
 
     pokeFront.appendChild(frontLabel)
     pokeFront.appendChild(frontImage)
@@ -98,7 +105,7 @@ function getImageFileName(pokemon) {
     if (pokemon.id > 9 && pokemon.id < 100) pokeId = `0${pokemon.id}`
     if (pokemon.id > 99 && pokemon.id < 810) pokeId = pokemon.id
     if (pokemon.id === 900) {
-        return
+        return `images/pokeball.png`
     }
     return `https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/images/${pokeId}.png`
 }

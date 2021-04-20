@@ -21,8 +21,7 @@ missedVotesButton.addEventListener('click', () => {
 })
 
 partyHackButton.addEventListener('click', () => {
-    console.log(partyHack)
-    //alert(partyHack)
+    alert(`There are ${partyHackArray.length} representatives who vote with their party ${partyHack.votes_with_party_pct}% of the time!`)
 })
 
 function populateCongressGrid(simplePeople) {
@@ -51,17 +50,13 @@ function getSimplifiedCongress(congressPeople) {
             id: person.id,
             title: person.title,
             name: `${person.first_name} ${middleName} ${person.last_name}`,
-            imgURL: `https://www.govtrack.us/static/legislator-photos/${person.govtrack_id}-200px.jpeg`,
+            imgURL: `https://www.govtrack.us/static/legislator-photos/${person.govtrack_id}-100px.jpeg`,
             seniority: parseInt(person.seniority, 10),
             date_of_birth: parseInt(person.date_of_birth, 10),
             missed_votes_pct: person.missed_votes_pct,
             votes_with_party_pct: person.votes_with_party_pct
         }
     })
-}
-
-function partySort(congressPeople) {
-
 }
 
 function senioritySort() {
@@ -80,4 +75,9 @@ const missedVotesRep = getSimplifiedCongress(representatives).filter((rep) => re
 
 const partyHack = getSimplifiedCongress(representatives).filter((rep) => rep.title === 'Representative').reduce((acc, rep) => acc.votes_with_party_pct > rep.votes_with_party_pct ? acc : rep)
 
+const partyHackArray = getSimplifiedCongress(representatives).filter((person) => {
+    return person.votes_with_party_pct === partyHack.votes_with_party_pct
+})
+
 populateCongressGrid(getSimplifiedCongress(senators))
+populateCongressGrid(getSimplifiedCongress(representatives))
