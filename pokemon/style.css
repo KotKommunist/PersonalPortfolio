@@ -53,25 +53,3 @@
   background: rgb(218, 202, 202);
   transform: rotateY(180deg);
 }
-
-.grass {
-background-color: green;
-}
-
-.fire {
-  background-color: red;
-}
-.water {
-  background-color: blue;
-}
-.bug {
-  background-color: blue;
-}
-
-.bug {
-  background-color: blue;
-}
-
-.flying {
-  background-color: blue;
-}
