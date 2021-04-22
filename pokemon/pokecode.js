@@ -58,7 +58,7 @@ async function getAPIData(url) {
 }
 
 function loadPage() {
-  getAPIData(`https://pokeapi.co/api/v2/pokemon?limit=150`).then(
+  getAPIData(`https://pokeapi.co/api/v2/pokemon?limit=809`).then(
     async (data) => {
       for (const singlePokemon of data.results) {
         await getAPIData(singlePokemon.url).then((pokeData) =>
@@ -168,25 +168,25 @@ function getPokeTypeColor(pokeType) {
       color = "#78C850";
       break;
     case "psychic":
-      color = "#F08030";
+      color = "#F85888";
       break;
     case "dark":
-      color = "#6890F0";
+      color = "#705848";
       break;
     case "fighting":
-      color = "#A8B820";
+      color = "#C03028";
       break;
     case "ground":
-      color = "#A8A878";
+      color = "#E0C068";
       break;
     case "rock":
-      color = "#A890F0";
+      color = "#B8A038";
       break;
     case "ice":
-      color = "#A040A0";
+      color = "#98D8D8";
       break;
     case "dragon":
-      color = "#F8D030";
+      color = "#7038F8";
       break;
     case "ghost":
       color = "#705898";
