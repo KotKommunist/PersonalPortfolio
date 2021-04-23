@@ -4,6 +4,36 @@
   box-sizing: border-box;
 }
 
+h1 {
+  text-align: center;
+  margin-bottom: .5em;
+}
+
+html {
+  font-family: "Orbitron", "Poppins", sans-serif;
+}
+
+button {
+  font-family: "Orbitron", "Poppins", sans-serif;
+}
+
+.loadPokemon {
+  height: 25px;
+  width: 240px;
+  background-color: red;
+}
+
+#fetchSelectedPokemon {
+  height: 25px;
+  width: 280px;
+  background-color: blue;
+}
+#newPokemon {
+  height: 25px;
+  width: 240px;
+  background-color: green;
+}
+
 .pokeGrid {
   display: flex;
   flex-wrap: wrap;
