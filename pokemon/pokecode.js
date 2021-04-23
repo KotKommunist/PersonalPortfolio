@@ -18,14 +18,14 @@ class Pokemon {
 loadButton.addEventListener('click', () => loadPage())
 
 newButton.addEventListener('click', () => {
-  let pokeName = prompt('What is the name of your new Pokemon?')
-  let pokeHeight = prompt('What is the height of your Pokemon?')
-  let pokeWeight = prompt('Pokemon weight?')
+  let pokeName = prompt('What is the name of your new Pokémon?')
+  let pokeHeight = prompt('What is the height of your Pokémon?')
+  let pokeWeight = prompt('Pokémon weight?')
   let pokeAbilities = prompt(
-    'What are your Pokemon abilities? (use a comma separated list)',
+    'What are your Pokémon abilities? (use a comma separated list)',
   )
-  let pokeMove = prompt("What is your Pokemon's best move?")
-  let pokeType = prompt("What is your Pokemon's type?")
+  let pokeMove = prompt("What is your Pokémon's best move?")
+  let pokeType = prompt("What is your Pokémon's type?")
   let abilitiesArray = getAbilitiesArray(pokeAbilities)
   let newPokemon = new Pokemon(
     pokeName,
@@ -62,7 +62,7 @@ function getAbilitiesArray(commaString) {
 }
 
 fetchButton.addEventListener('click', () => {
-  let pokeNameOrId = prompt('Enter Pokemon ID or Name:').toLowerCase()
+  let pokeNameOrId = prompt('Enter Pokémon ID or Name:').toLowerCase()
   console.log(pokeNameOrId)
   getAPIData(`https://pokeapi.co/api/v2/pokemon/${pokeNameOrId}`).then((data) =>
     populatePokeCard(data),
