@@ -80,7 +80,7 @@ async function getAPIData(url) {
 }
 
 function loadPage() {
-  getAPIData(`https://pokeapi.co/api/v2/pokemon?limit=30`).then(
+  getAPIData(`https://pokeapi.co/api/v2/pokemon?limit=30&offset=660`).then(
     async (data) => {
       for (const singlePokemon of data.results) {
         await getAPIData(singlePokemon.url).then((pokeData) =>
@@ -111,7 +111,7 @@ function populateCardFront(pokemon) {
   let pokeFront = document.createElement('div')
   pokeFront.className = 'card__face card__face--front'
   let frontLabel = document.createElement('p')
-  frontLabel.textContent = pokemon.name
+  frontLabel.textContent = pokemon.name.toUpperCase()
   let frontImage = document.createElement('img')
   frontImage.src = getImageFileName(pokemon)
 
@@ -155,7 +155,7 @@ function populateCardBack(pokemon) {
 
   pokemon.types.forEach((pokeType) => {
     let backType = document.createElement('p')
-    backType.textContent = pokeType.type.name
+    backType.textContent = pokeType.type.name.toUpperCase()
     pokeBack.appendChild(backType)
   })
   let abilityLabel = document.createElement('h3')
@@ -163,14 +163,8 @@ function populateCardBack(pokemon) {
   pokeBack.appendChild(abilityLabel)
   pokemon.abilities.forEach((pokeAbility) => {
     let ability = document.createElement('p')
-    ability.textContent = pokeAbility.ability.name
+    ability.textContent = pokeAbility.ability.name.toUpperCase()
     pokeBack.appendChild(ability)
-  })
-
-  pokemon.stats.forEach((stat) => {
-    let statPara = document.createElement('p')
-    statPara.textContent = `${stat.stat.name} : ${stat.base_stat}`
-    pokeBack.appendChild(statPara)
   })
 
   return pokeBack
