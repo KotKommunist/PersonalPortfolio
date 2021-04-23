@@ -117,7 +117,7 @@ function populateCardFront(pokemon) {
 
   frontImage.addEventListener(
     'error',
-    (err) => (frontImage.src = 'images/pokeball.png'),
+    (err) => (frontImage.src = 'images/MissingNo..png'),
   )
   typesBackground(pokemon, pokeFront)
 
