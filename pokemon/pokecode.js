@@ -25,6 +25,7 @@ newButton.addEventListener('click', () => {
     'What are your Pokemon abilities? (use a comma separated list)',
   )
   let pokeMove = prompt("What is your Pokemon's best move?")
+  let pokeType = prompt("What is your Pokemon's type?")
   let abilitiesArray = getAbilitiesArray(pokeAbilities)
   let newPokemon = new Pokemon(
     pokeName,
@@ -41,7 +42,7 @@ newButton.addEventListener('click', () => {
     [
       {
         type: {
-          name: '???',
+          name: pokeType,
         },
       },
     ],
