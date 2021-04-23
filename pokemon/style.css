@@ -9,9 +9,14 @@ h1 {
   margin-bottom: .5em;
 }
 
-html {
+header {
+  background-color:#a1eba1;
   font-family: "Orbitron", "Poppins", sans-serif;
-  background: linear-gradient(rgb(161, 235, 161), #FFFFFF);
+}
+
+main {
+  font-family: "Orbitron", "Poppins", sans-serif;
+  background: linear-gradient(#a1eba1, #f27979, #9d9df2 );
 }
 
 button {
