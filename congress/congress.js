@@ -79,5 +79,27 @@ const partyHackArray = getSimplifiedCongress(representatives).filter((person) =>
     return person.votes_with_party_pct === partyHack.votes_with_party_pct
 })
 
+function partyColor() {
+    if (pokemon.types.length > 1) {
+     
+    } 
+  }
+
+function getPokeTypeColor(pokeType) {
+    let color;
+    switch (partyColor) {
+      case "R":
+        color = "#FF0000";
+        break;
+      case "D":
+        color = "#0000ff";
+        break;
+      default:
+        color = "#68A090";
+    }
+    return color;
+  }
+  
+
 populateCongressGrid(getSimplifiedCongress(senators))
 populateCongressGrid(getSimplifiedCongress(representatives))
