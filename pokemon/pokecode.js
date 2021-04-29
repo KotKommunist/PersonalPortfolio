@@ -1,7 +1,9 @@
 const pokeGrid = document.querySelector('.pokeGrid')
+const gen2Grid = document.querySelector('.gen2')
 const loadButton = document.querySelector('.loadPokemon')
 const fetchButton = document.querySelector('#fetchSelectedPokemon')
 const newButton = document.querySelector('#newPokemon')
+const gen2Button = document.querySelector('#gen2')
 
 class Pokemon {
   constructor(name, height, weight, abilities, moves, types) {
@@ -15,7 +17,9 @@ class Pokemon {
   }
 }
 
-loadButton.addEventListener('click', () => loadPage())
+gen2Button.addEventListener('click', () => loadContainer(gen2Grid, 100, 151))
+
+loadButton.addEventListener('click', () => loadContainer(pokeGrid, 151, 0))
 
 newButton.addEventListener('click', () => {
   let pokeName = prompt('What is the name of your new Pokémon?')
@@ -47,7 +51,7 @@ newButton.addEventListener('click', () => {
       },
     ],
   )
-  populatePokeCard(newPokemon)
+  populatePokeCard(newPokemon, pokeGrid)
 })
 
 function getAbilitiesArray(commaString) {
@@ -65,7 +69,7 @@ fetchButton.addEventListener('click', () => {
   let pokeNameOrId = prompt('Enter Pokémon ID or Name:').toLowerCase()
   console.log(pokeNameOrId)
   getAPIData(`https://pokeapi.co/api/v2/pokemon/${pokeNameOrId}`).then((data) =>
-    populatePokeCard(data),
+    populatePokeCard(data, pokeGrid),
   )
 })
 
@@ -80,19 +84,18 @@ async function getAPIData(url) {
   }
 }
 
-function loadPage() {
-  getAPIData(`https://pokeapi.co/api/v2/pokemon?limit=135&offset=251`).then(
+function loadContainer(container, limit, offset) {
+  getAPIData(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`).then(
     async (data) => {
       for (const singlePokemon of data.results) {
         await getAPIData(singlePokemon.url).then((pokeData) =>
-          populatePokeCard(pokeData),
+          populatePokeCard(pokeData, container),
         )
       }
     },
   )
 }
-
-function populatePokeCard(singlePokemon) {
+function populatePokeCard(singlePokemon, container) {
   // console.log(singlePokemon)
   let pokeScene = document.createElement('div')
   pokeScene.className = 'scene'
@@ -104,7 +107,7 @@ function populatePokeCard(singlePokemon) {
   pokeCard.appendChild(populateCardFront(singlePokemon))
   pokeCard.appendChild(populateCardBack(singlePokemon))
   pokeScene.appendChild(pokeCard)
-  pokeGrid.appendChild(pokeScene)
+  container.appendChild(pokeScene)
 }
 
 function populateCardFront(pokemon) {
