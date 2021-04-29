@@ -4,6 +4,18 @@ const loadButton = document.querySelector('.loadPokemon')
 const fetchButton = document.querySelector('#fetchSelectedPokemon')
 const newButton = document.querySelector('#newPokemon')
 const gen2Button = document.querySelector('#gen2')
+const gen3Grid = document.querySelector('.gen3')
+const gen3Button = document.querySelector('#gen3')
+const gen4Grid = document.querySelector('.gen4')
+const gen4Button = document.querySelector('#gen4')
+const gen5Grid = document.querySelector('.gen5')
+const gen5Button = document.querySelector('#gen5')
+const gen6Grid = document.querySelector('.gen6')
+const gen6Button = document.querySelector('#gen6')
+const gen7Grid = document.querySelector('.gen7')
+const gen7Button = document.querySelector('#gen7')
+const gen8Grid = document.querySelector('.gen8')
+const gen8Button = document.querySelector('#gen8')
 
 class Pokemon {
   constructor(name, height, weight, abilities, moves, types) {
@@ -16,6 +28,17 @@ class Pokemon {
     this.types = types
   }
 }
+gen8Button.addEventListener('click', () => loadContainer(gen8Grid, 89, 809))
+
+gen7Button.addEventListener('click', () => loadContainer(gen7Grid, 88, 721))
+
+gen6Button.addEventListener('click', () => loadContainer(gen6Grid, 72, 649))
+
+gen5Button.addEventListener('click', () => loadContainer(gen5Grid, 156, 493))
+
+gen4Button.addEventListener('click', () => loadContainer(gen4Grid, 107, 386))
+
+gen3Button.addEventListener('click', () => loadContainer(gen3Grid, 135, 251))
 
 gen2Button.addEventListener('click', () => loadContainer(gen2Grid, 100, 151))
 
