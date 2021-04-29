@@ -94,6 +94,10 @@ function getPokeTypeColor(pokeType) {
       case "D":
         color = "#0000ff";
         break;
+        case "ID":
+            color = "#FFFF00";
+            break;
+        
       default:
         color = "#68A090";
     }
