@@ -28,21 +28,22 @@ class Pokemon {
     this.types = types
   }
 }
-gen8Button.addEventListener('click', () => loadContainer(gen8Grid, 89, 809))
 
-gen7Button.addEventListener('click', () => loadContainer(gen7Grid, 88, 721))
-
-gen6Button.addEventListener('click', () => loadContainer(gen6Grid, 72, 649))
-
-gen5Button.addEventListener('click', () => loadContainer(gen5Grid, 156, 493))
-
-gen4Button.addEventListener('click', () => loadContainer(gen4Grid, 107, 386))
-
-gen3Button.addEventListener('click', () => loadContainer(gen3Grid, 135, 251))
+loadButton.addEventListener('click', () => loadContainer(pokeGrid, 151, 0))
 
 gen2Button.addEventListener('click', () => loadContainer(gen2Grid, 100, 151))
 
-loadButton.addEventListener('click', () => loadContainer(pokeGrid, 151, 0))
+gen3Button.addEventListener('click', () => loadContainer(gen3Grid, 135, 251))
+
+gen4Button.addEventListener('click', () => loadContainer(gen4Grid, 107, 386))
+
+gen5Button.addEventListener('click', () => loadContainer(gen5Grid, 156, 493))
+
+gen6Button.addEventListener('click', () => loadContainer(gen6Grid, 72, 649))
+
+gen7Button.addEventListener('click', () => loadContainer(gen7Grid, 88, 721))
+
+gen8Button.addEventListener('click', () => loadContainer(gen8Grid, 89, 809))
 
 newButton.addEventListener('click', () => {
   let pokeName = prompt('What is the name of your new Pokémon?')
