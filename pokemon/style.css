@@ -10,11 +10,46 @@ h1 {
 }
 
 header {
-  background-color:#a1eba1;
+  background-color:#ffff9e;
   font-family: "Orbitron", "Poppins", sans-serif;
 }
 
-main {
+.pokeGrid {
+  font-family: "VCR OSD Mono [RUS by Daymarius]", "Orbitron", sans-serif;
+  background-color: linear-gradient(#f75555, #12b612 #5f5fff, #ffff00 );
+}
+
+.gen2 {
+  font-family: "Orbitron", "Poppins", sans-serif;
+  background: linear-gradient(#a1eba1, #f27979, #9d9df2 );
+}
+
+.gen3 {
+  font-family: "Orbitron", "Poppins", sans-serif;
+  background: linear-gradient(#a1eba1, #f27979, #9d9df2 );
+}
+
+.gen4 {
+  font-family: "Orbitron", "Poppins", sans-serif;
+  background: linear-gradient(#a1eba1, #f27979, #9d9df2 );
+}
+
+.gen5 {
+  font-family: "Orbitron", "Poppins", sans-serif;
+  background: linear-gradient(#a1eba1, #f27979, #9d9df2 );
+}
+
+.gen6 {
+  font-family: "Orbitron", "Poppins", sans-serif;
+  background: linear-gradient(#a1eba1, #f27979, #9d9df2 );
+}
+
+.gen7 {
+  font-family: "Orbitron", "Poppins", sans-serif;
+  background: linear-gradient(#a1eba1, #f27979, #9d9df2 );
+}
+
+.gen8 {
   font-family: "Orbitron", "Poppins", sans-serif;
   background: linear-gradient(#a1eba1, #f27979, #9d9df2 );
 }
@@ -26,7 +61,7 @@ button {
 .loadPokemon {
   height: 25px;
   width: 240px;
-  background-color: red;
+  background: linear-gradient(0.25turn, #f75555, #5f5fff);
 }
 
 #fetchSelectedPokemon {
