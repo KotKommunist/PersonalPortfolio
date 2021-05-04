@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #ffffd7;
+}
 
 h1 {
   text-align: center;
@@ -15,7 +18,7 @@ h1 {
 }
 
 header {
-  background-color:#fafab8;
+  background-color:#ffffd7;
   font-family: "Orbitron", "Poppins", sans-serif;
 }
 
@@ -61,7 +64,7 @@ header {
 
 
 button {
-  margin-left: 2px;
+  margin-left: 1.6px;
 }
 
 
