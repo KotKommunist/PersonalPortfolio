@@ -60,6 +60,10 @@ header {
 }
 
 
+button {
+  margin-left: 2px;
+}
+
 
 .loadPokemon {
   font-family: "VCR OSD Mono [RUS by Daymarius]", "Poppins", sans-serif;
