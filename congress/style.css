@@ -19,6 +19,7 @@ h1 {
 
 button {
     margin-left: 2.9em;
+    background: linear-gradient(0.25turn,red, white,blue);
 }
 
 
