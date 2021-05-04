@@ -3,10 +3,24 @@
     box-sizing: border-box;
 }
 
+body {
+    background: linear-gradient(red,white, blue);
+}
+
 .congressGrid {
     display: flex;
     flex-wrap: wrap;
 }
+
+h1 {
+    text-align: center;
+    margin-bottom: .5em;
+}
+
+button {
+    margin-left: 2.9em;
+}
+
 
 .figureDiv {
     padding: 6px;
