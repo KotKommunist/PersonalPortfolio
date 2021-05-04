@@ -4,74 +4,133 @@
   box-sizing: border-box;
 }
 
+
 h1 {
   text-align: center;
   margin-bottom: .5em;
+  font-family: "VCR OSD Mono [RUS by Daymarius]";
+  color: #ffd733;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #025DA6;
 }
 
 header {
-  background-color:#ffff9e;
+  background-color:#fafab8;
   font-family: "Orbitron", "Poppins", sans-serif;
 }
 
 .pokeGrid {
   font-family: "VCR OSD Mono [RUS by Daymarius]", "Orbitron", sans-serif;
-  background-color: linear-gradient(#f75555, #12b612 #5f5fff, #ffff00 );
+  background: linear-gradient(#ff1111, #64d364, #6464ff, #ffd733);
 }
 
 .gen2 {
-  font-family: "Orbitron", "Poppins", sans-serif;
-  background: linear-gradient(#a1eba1, #f27979, #9d9df2 );
+  font-family: "VCR OSD Mono [RUS by Daymarius]", "Poppins", sans-serif;
+  background: linear-gradient(#ffd700, #c0c0c0,#4fd9ff);
 }
 
 .gen3 {
-  font-family: "Orbitron", "Poppins", sans-serif;
-  background: linear-gradient(#a1eba1, #f27979, #9d9df2 );
+  font-family: "VCR OSD Mono [RUS by Daymarius]", "Poppins", sans-serif;
+  background: linear-gradient(#A00000,#5959C1,#00A000);
 }
 
 .gen4 {
-  font-family: "Orbitron", "Poppins", sans-serif;
-  background: linear-gradient(#a1eba1, #f27979, #9d9df2 );
+  font-family: "VCR OSD Mono [RUS by Daymarius]", "Poppins", sans-serif;
+  background: linear-gradient(#AAAAFF,#FFC8C8,#BDBDBD);
 }
 
 .gen5 {
-  font-family: "Orbitron", "Poppins", sans-serif;
-  background: linear-gradient(#a1eba1, #f27979, #9d9df2 );
+  font-family: "VCR OSD Mono [RUS by Daymarius]", "Poppins", sans-serif;
+  background: linear-gradient(#000000, #ffffff);
 }
 
 .gen6 {
-  font-family: "Orbitron", "Poppins", sans-serif;
-  background: linear-gradient(#a1eba1, #f27979, #9d9df2 );
+  font-family: "VCR OSD Mono [RUS by Daymarius]", "Poppins", sans-serif;
+  background: linear-gradient(#025DA6, #F16A81);
 }
 
 .gen7 {
-  font-family: "Orbitron", "Poppins", sans-serif;
-  background: linear-gradient(#a1eba1, #f27979, #9d9df2 );
+  font-family: "VCR OSD Mono [RUS by Daymarius]", "Poppins", sans-serif;
+  background: linear-gradient(#F1912B, #90BDDC);
 }
 
 .gen8 {
-  font-family: "Orbitron", "Poppins", sans-serif;
-  background: linear-gradient(#a1eba1, #f27979, #9d9df2 );
+  font-family: "VCR OSD Mono [RUS by Daymarius]", "Poppins", sans-serif;
+  background: linear-gradient(#00A1E9,#D5598C);
 }
 
-button {
-  font-family: "Orbitron", "Poppins", sans-serif;
-}
+
 
 .loadPokemon {
+  font-family: "VCR OSD Mono [RUS by Daymarius]", "Poppins", sans-serif;
   height: 25px;
-  width: 240px;
-  background: linear-gradient(0.25turn, #f75555, #5f5fff);
+  width: 130px;
+  background: linear-gradient(0.25turn, #ff1111, #64d364, #6464ff, #ffd733);
+}
+
+#gen2 {
+  font-family: "VCR OSD Mono [RUS by Daymarius]", "Poppins", sans-serif;
+  height: 25px;
+  width: 130px;
+  background: linear-gradient(0.25turn,#ffd700, #c0c0c0,#4fd9ff);
+}
+
+#gen3 {
+  font-family: "VCR OSD Mono [RUS by Daymarius]", "Poppins", sans-serif;
+  height: 25px;
+  width: 130px;
+  background: linear-gradient(0.25turn,#A00000,#5959C1,#00A000);
+}
+
+#gen4 {
+  font-family: "VCR OSD Mono [RUS by Daymarius]", "Poppins", sans-serif;
+  height: 25px;
+  width: 130px;
+  background: linear-gradient(0.25turn,#AAAAFF,#FFC8C8,#BDBDBD);
+}
+
+#gen5 {
+  font-family: "VCR OSD Mono [RUS by Daymarius]", "Poppins", sans-serif;
+  height: 25px;
+  width: 130px;
+  background: linear-gradient(0.25turn, #000000, #ffffff);
+  color: #fff;
+  -webkit-text-stroke-width: .6px;
+  -webkit-text-stroke-color: #000;
+}
+
+#gen6 {
+  font-family: "VCR OSD Mono [RUS by Daymarius]", "Poppins", sans-serif;
+  height: 25px;
+  width: 130px;
+  background: linear-gradient(0.25turn,#025DA6, #F16A81);
+}
+
+#gen7 {
+  font-family: "VCR OSD Mono [RUS by Daymarius]", "Poppins", sans-serif;
+  height: 23px;
+  width: 130px;
+  background: linear-gradient(0.25turn,#F1912B, #90BDDC);
+}
+
+#gen8 {
+  font-family: "VCR OSD Mono [RUS by Daymarius]", "Poppins", sans-serif;
+  height: 25px;
+  width: 130px;
+  background: linear-gradient(0.25turn,#00A1E9,#D5598C);
 }
 
 #fetchSelectedPokemon {
+  font-family: "VCR OSD Mono [RUS by Daymarius]", "Poppins", sans-serif;
   height: 25px;
-  width: 280px;
+  width: 130px;
   background-color: blue;
 }
+
 #newPokemon {
+  font-family: "VCR OSD Mono [RUS by Daymarius]", "Poppins", sans-serif;
   height: 25px;
-  width: 240px;
+  width: 130px;
   background-color: green;
 }
 
@@ -110,8 +169,6 @@ button {
   font-weight: bold;
   backface-visibility: hidden;
 }
-
-
 
 .card__face--front img {
   height: 190px;
