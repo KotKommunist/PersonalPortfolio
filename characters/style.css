@@ -7,8 +7,14 @@ body {
 }
 #main {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     color: white;
+}
+
+figure {
+    padding: 6px;
+
 }
 
 figure > img {

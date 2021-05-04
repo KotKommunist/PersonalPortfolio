@@ -1,35 +1,42 @@
 * {
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: linear-gradient(red,white, blue);
+  background: linear-gradient(red, white, blue);
 }
 
 .congressGrid {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 h1 {
-    text-align: center;
-    margin-bottom: .5em;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+header > div {
+  display: flex;
+  justify-content: center;
+  padding: 6px;
+  margin: 6px;
+}
+
+div > button {
+    margin: 6px;
 }
 
 button {
-    margin-left: 2.9em;
-    background: linear-gradient(0.25turn,red, white,blue);
+  background: linear-gradient(0.25turn, red, white, blue);
 }
-
 
 .figureDiv {
-    padding: 6px;
-    margin: 6px;
-    border: 1px red solid;
-    box-shadow: 6px 6px 6px black;
-    text-align: center;
-    margin-left: 2.5em;
+  padding: 6px;
+  margin: 6px;
+  border: 1px red solid;
+  box-shadow: 6px 6px 6px black;
+  text-align: center;
 }
-
-
