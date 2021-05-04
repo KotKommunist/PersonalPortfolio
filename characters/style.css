@@ -14,3 +14,12 @@ body {
 figure > img {
     height: 200px;
 }
+
+button {
+    margin-left: 1.6px;
+    height: 25px;
+    width: 190px;
+    font-family: "Poppins", sans-serif;
+    color: #ffd700;
+    background-color: black;
+  }
