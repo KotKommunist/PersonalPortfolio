@@ -236,9 +236,6 @@ function getPokeTypeColor(pokeType) {
     case "electric":
       color = "#F8D030";
       break;
-    case "grass":
-      color = "#78C850";
-      break;
     case "psychic":
       color = "#F85888";
       break;
