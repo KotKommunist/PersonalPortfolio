@@ -63,6 +63,11 @@ header {
   background: linear-gradient(#00A1E9,#D5598C);
 }
 
+.gen9 {
+  font-family: "VCR OSD Mono [RUS by Daymarius]", "Poppins", sans-serif;
+  background: linear-gradient(#F34134,#8334B7);
+}
+
 
 button {
   margin-left: 1.6px;
