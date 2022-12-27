@@ -112,6 +112,10 @@ button {
   background: linear-gradient(0.25turn,#00A1E9,#D5598C);
 }
 
+#gen9 {
+  background: linear-gradient(0.25turn,#F34134,#8334B7);
+}
+
 #fetchSelectedPokemon {
   background-color: blue;
 }
