@@ -16,6 +16,8 @@ const gen7Grid = document.querySelector('.gen7')
 const gen7Button = document.querySelector('#gen7')
 const gen8Grid = document.querySelector('.gen8')
 const gen8Button = document.querySelector('#gen8')
+const gen9Grid = document.querySelector('.gen9')
+const gen9Button = document.querySelector('#gen9')
 
 class Pokemon {
   constructor(name, height, weight, abilities, moves, types) {
@@ -43,7 +45,9 @@ gen6Button.addEventListener('click', () => loadContainer(gen6Grid, 72, 649))
 
 gen7Button.addEventListener('click', () => loadContainer(gen7Grid, 88, 721))
 
-gen8Button.addEventListener('click', () => loadContainer(gen8Grid, 89, 809))
+gen8Button.addEventListener('click', () => loadContainer(gen8Grid, 96, 809))
+
+gen9Button.addEventListener('click', () => loadContainer(gen9Grid, 112, 905))
 
 newButton.addEventListener('click', () => {
   let pokeName = prompt('What is the name of your new Pokémon?')
@@ -202,7 +206,7 @@ function getImageFileName(pokemon) {
   let pokeId
   if (pokemon.id < 10) pokeId = `00${pokemon.id}`
   if (pokemon.id > 9 && pokemon.id < 100) pokeId = `0${pokemon.id}`
-  if (pokemon.id > 99 && pokemon.id < 899) pokeId = pokemon.id
+  if (pokemon.id > 99 && pokemon.id < 999) pokeId = pokemon.id
   if (pokemon.id === 1000) {
     return `images/pokeball.png`
   }
