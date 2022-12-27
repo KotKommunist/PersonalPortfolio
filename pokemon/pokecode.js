@@ -21,7 +21,7 @@ const gen9Button = document.querySelector('#gen9')
 
 class Pokemon {
   constructor(name, height, weight, abilities, moves, types) {
-    this.id = 1000
+    this.id = 2000
     this.name = name
     this.height = height
     this.weight = weight
@@ -207,7 +207,7 @@ function getImageFileName(pokemon) {
   if (pokemon.id < 10) pokeId = `00${pokemon.id}`
   if (pokemon.id > 9 && pokemon.id < 100) pokeId = `0${pokemon.id}`
   if (pokemon.id > 99 && pokemon.id < 999) pokeId = pokemon.id
-  if (pokemon.id === 1000) {
+  if (pokemon.id === 2000) {
     return `images/pokeball.png`
   }
   return `https://www.serebii.net/pokemon/art/${pokeId}.png`
