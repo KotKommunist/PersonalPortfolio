@@ -113,16 +113,22 @@ async function getAPIData(url) {
 }
 
 function loadContainer(container, limit, offset) {
+  // Clear the container before loading new Pokémon
+  container.innerHTML = '';  // This removes all existing cards in the container
+
   getAPIData(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`).then(
     async (data) => {
       for (const singlePokemon of data.results) {
         await getAPIData(singlePokemon.url).then((pokeData) =>
           populatePokeCard(pokeData, container),
-        )
+        );
       }
-    }
-  )
+    },
+  );
 }
+
+
+
 function populatePokeCard(singlePokemon, container) {
   // console.log(singlePokemon)
   let pokeScene = document.createElement('div')
