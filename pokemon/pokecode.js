@@ -120,7 +120,7 @@ function loadContainer(container, limit, offset) {
           populatePokeCard(pokeData, container),
         )
       }
-    },
+    }
   )
 }
 function populatePokeCard(singlePokemon, container) {
