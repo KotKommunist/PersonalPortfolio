@@ -180,33 +180,42 @@ function typesBackground(pokemon, card) {
 }
 
 function populateCardBack(pokemon) {
-  let pokeBack = document.createElement('div')
-  pokeBack.className = 'card__face card__face--back'
-  typesBackground(pokemon, pokeBack)
-  let backLabel = document.createElement('p')
-  backLabel.textContent = `Moves: ${pokemon.moves.length}`
-  pokeBack.appendChild(backLabel)
+  let pokeBack = document.createElement('div');
+  pokeBack.className = 'card__face card__face--back';
+  typesBackground(pokemon, pokeBack);
 
-  let typeLabel = document.createElement('h3')
-  typeLabel.textContent = 'Types:'
-  pokeBack.appendChild(typeLabel)
+  let backLabel = document.createElement('p');
+  backLabel.textContent = `Moves: ${pokemon.moves.length}`;
+  pokeBack.appendChild(backLabel);
 
+  let typeLabel = document.createElement('h3');
+  typeLabel.textContent = 'Types:';
+  pokeBack.appendChild(typeLabel);
+
+  // Display the types
   pokemon.types.forEach((pokeType) => {
-    let backType = document.createElement('p')
-    backType.textContent = pokeType.type.name.toUpperCase()
-    pokeBack.appendChild(backType)
-  })
-  let abilityLabel = document.createElement('h3')
-  abilityLabel.textContent = 'Abilities:'
-  pokeBack.appendChild(abilityLabel)
-  pokemon.abilities.forEach((pokeAbility) => {
-    let ability = document.createElement('p')
-    ability.textContent = pokeAbility.ability.name.toUpperCase()
-    pokeBack.appendChild(ability)
-  })
+    let backType = document.createElement('p');
+    backType.textContent = pokeType.type.name.toUpperCase();
+    pokeBack.appendChild(backType);
+  });
 
-  return pokeBack
+  let abilityLabel = document.createElement('h3');
+  abilityLabel.textContent = 'Abilities:';
+  pokeBack.appendChild(abilityLabel);
+
+  // Use a Set to remove duplicates (if any)
+  const uniqueAbilities = new Set(pokemon.abilities.map(pokeAbility => pokeAbility.ability.name));
+
+  // Display abilities, ensuring each ability is only listed once
+  uniqueAbilities.forEach(ability => {
+    let abilityElement = document.createElement('p');
+    abilityElement.textContent = ability.toUpperCase();
+    pokeBack.appendChild(abilityElement);
+  });
+
+  return pokeBack;
 }
+
 
 function getImageFileName(pokemon) {
   let pokeId
