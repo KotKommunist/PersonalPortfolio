@@ -207,7 +207,7 @@ function getImageFileName(pokemon) {
   if (pokemon.id < 10) pokeId = `00${pokemon.id}`
   if (pokemon.id > 9 && pokemon.id < 100) pokeId = `0${pokemon.id}`
   if (pokemon.id > 99 && pokemon.id < 1000) pokeId = pokemon.id
-  if (pokemon.id > 1000 && pokemon.id < 1999) pokeId = pokemon.id
+  if (pokemon.id > 999 && pokemon.id < 1999) pokeId = pokemon.id
   if (pokemon.id === 2000) {
     return `images/pokeball.png`
   }
