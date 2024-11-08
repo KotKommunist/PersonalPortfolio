@@ -122,24 +122,6 @@ a {
   text-decoration: none;
 }
 
-.card__face--back {
-  padding: 20px;
-}
-
-.card__face--back h3 {
-  margin-top: 20px;  /* Adds space above section headers */
-  margin-bottom: 10px; /* Adds space below section headers */
-}
-
-.card {
-  padding: 10px;
-}
-
-.scene {
-  margin-bottom: 15px;
-}
-
-
 @media (max-width: 1200px) {
   html {
     font-size: 100%;
