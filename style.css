@@ -13,9 +13,17 @@
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: "VCR OSD Mono [RUS by Daymarius]", "Poppins", sans-serif;
+@font-face {
+  font-family: '3117 Font'; /* Name the font family that you'll use in your styles */
+  src: url('fonts/3117-font.ttf') format('truetype'); /* Path to your .ttf file */
+  font-weight: normal;
+  font-style: normal;
 }
+
+body {
+  font-family: '3117 Font', 'Poppins', sans-serif;
+}
+
 
 #navbar {
   width: 100%;
