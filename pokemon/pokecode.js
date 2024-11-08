@@ -47,7 +47,7 @@ gen7Button.addEventListener('click', () => loadContainer(gen7Grid, 88, 721))
 
 gen8Button.addEventListener('click', () => loadContainer(gen8Grid, 96, 809))
 
-gen9Button.addEventListener('click', () => loadContainer(gen9Grid, 112, 905))
+gen9Button.addEventListener('click', () => loadContainer(gen9Grid, 120, 905))
 
 newButton.addEventListener('click', () => {
   let pokeName = prompt('What is the name of your new Pokémon?')
