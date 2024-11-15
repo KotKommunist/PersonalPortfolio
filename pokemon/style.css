@@ -8,6 +8,13 @@ body {
   background-color: #ffffd7;
 }
 
+@font-face {
+  font-family: '3117 Font'; /* Name the font family that you'll use in your styles */
+  src: url('fonts/3117-font.ttf') format('truetype'); /* Path to your .ttf file */
+  font-weight: normal;
+  font-style: normal;
+}
+
 h1 {
   text-align: center;
   margin-bottom: .5em;
